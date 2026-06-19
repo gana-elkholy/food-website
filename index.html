@@ -1,1 +1,73 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>نكهات · أطباق من كل بقاع الأرض</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@700&family=Tajawal:wght@400;500;700;800&family=Fraunces:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+<header>
+  <div class="wrap header-inner">
+    <div class="logo">نكهات<small>أطباق من كل بقاع الأرض</small></div>
+    <form class="search-form" id="searchForm" role="search">
+      <input type="text" id="searchInput" placeholder="ابحث عن طبق… مثل Pasta" aria-label="ابحث عن طبق">
+      <button type="submit" class="btn-search">بحث</button>
+    </form>
+    <button class="fav-nav-btn" id="favNavBtn" aria-label="عرض الأطباق المفضلة">
+      ❤ <span id="favCount">0</span> المفضلة
+    </button>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-text">
+      <p class="eyebrow">اكتشف · جرّب · تذوّق</p>
+      <h1>كل طبق له <em>حكاية</em>، وكل نكهة لها وجهة</h1>
+      <p>تصفّح أطباقًا حقيقية من مطابخ العالم، فلتر حسب النوع، احفظ المفضلة لديك، وشاهد طريقة التحضير كاملة بضغطة واحدة.</p>
+      <div class="hero-actions">
+        <button class="btn-primary" id="surpriseBtn">🎲 فاجئني بطبق</button>
+        <button class="btn-ghost" id="browseBtn">تصفح الأقسام</button>
+      </div>
+    </div>
+    <div class="spotlight" id="spotlight">
+      <div class="spotlight-skel skeleton"></div>
+    </div>
+  </div>
+</section>
+
+<section id="categories">
+  <div class="wrap">
+    <div class="pills" id="pills"></div>
+  </div>
+</section>
+
+<section class="results">
+  <div class="wrap">
+    <div class="results-head">
+      <h2 id="resultsTitle">أطباق مقترحة</h2>
+      <span id="resultsSub"></span>
+    </div>
+    <div class="grid" id="grid" aria-live="polite"></div>
+  </div>
+</section>
+
+<footer>
+  البيانات والصور مقدّمة من <a href="https://www.themealdb.com" target="_blank" rel="noopener">TheMealDB</a> · صفحة تجريبية لعرض الأطباق
+</footer>
+
+<div class="overlay" id="overlay">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <button class="modal-close" id="modalClose" aria-label="إغلاق">✕</button>
+    <div id="modalContent"></div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+  </html>
